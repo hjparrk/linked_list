@@ -62,7 +62,7 @@ void print_list (Node* head) {
     printf("%d\n",cursor->val);
 } 
 
-// free all the malloc'ed node of the list
+// free all the malloc'ed nodes of the list
 void delete_list (Node* head) {
 
     // do nothing if the list is already empty

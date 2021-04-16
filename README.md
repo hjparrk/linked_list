@@ -17,3 +17,6 @@ The new node will be the last node of the list
 
 This function displays the data stored in all the nodes of the list starting from the head node
 
+### delete_list(Node* head)
+
+This function delete the linked list by freeing all the malloc'ed nodes
