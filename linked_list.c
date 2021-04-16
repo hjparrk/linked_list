@@ -10,15 +10,6 @@ typedef struct node {
 
 } Node;
 
-Node* create_empty_list() {
-
-    Node* head =  (Node*)malloc(sizeof(Node));
-    head->isHead = true;
-    head->val =  -1;
-    head->next = NULL;
-
-    return head;
-}
 
 int main() {
 
