@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 // structure of Node
 typedef struct node {
@@ -48,7 +49,7 @@ void print_list (Node* head) {
     // assign the cursor to the head node
     Node* cursor = head;
 
-    printf("The data : ");
+    printf("\nThe data : ");
 
     // traverse the list
     while(cursor->next != NULL) {
@@ -61,6 +62,26 @@ void print_list (Node* head) {
     printf("%d\n",cursor->val);
 } 
 
+// free all the malloc'ed node of the list
+void delete_list (Node* head) {
+
+    // do nothing if the list is already empty
+    if(head == NULL) {
+        return;
+    }
+
+    Node* tmp = head;
+
+    // free from the head node to the last node
+    while(head != NULL) {
+        
+        tmp = head;
+        head = head->next;
+        free(tmp);
+    }
+
+}
+
 
 int main() {
 
@@ -70,6 +91,11 @@ int main() {
     attach_node_to_list(head,second);
 
     print_list(head);
+
+    delete_list(head);
+
+    printf("\n\tThe program is terminating\n");
+    sleep(3);
 
     return 0;
 
