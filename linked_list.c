@@ -71,10 +71,6 @@ int main() {
 
     print_list(head);
 
-    // printf("the val: %d\n", head->val);
-    // printf("the val: %d\n", head->next->val);
-
-
     return 0;
 
 }
